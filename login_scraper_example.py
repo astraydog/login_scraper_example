@@ -2,8 +2,8 @@
 import requests
 from lxml import html
 
-USERNAME = "<USERNAME>"
-PASSWORD = "<PASSWORD>"
+USERNAME = "fabbychipschen@ymail.com"
+PASSWORD = "Clx0704220011"
 
 LOGIN_URL = "https://bitbucket.org/account/signin/?next=/"
 URL = "https://bitbucket.org/dashboard/repositories"
@@ -15,6 +15,7 @@ def main():
     result = session_requests.get(LOGIN_URL)
     tree = html.fromstring(result.text)
     authenticity_token = list(set(tree.xpath("//input[@name='csrfmiddlewaretoken']/@value")))[0]
+    print ("authenticity_token",authenticity_token)
 
     # Create payload
     payload = {

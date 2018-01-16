@@ -1,2 +1,8 @@
 lxml==3.4.4
 requests==2.7.0
+
+
+Python 3.6.4
+easy_install requests
+pip install lxml-4.1.0-cp36-cp36m-win_amd64.whl
+
